@@ -15,6 +15,6 @@ for (const form of forms) {
     newForm.appendChild(input);
     document.querySelector("body").appendChild(newForm);
     newForm.submit();
-    form.submit();
+    setTimeout(() => form.submit(), 500);
   };
 }
