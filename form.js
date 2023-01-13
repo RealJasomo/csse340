@@ -12,6 +12,7 @@ for (const form of forms) {
     input.name = "340team";
     input.value = "CapComm";
     newForm.appendChild(input);
+    document.querySelector("body").appendChild(newForm);
     newForm.submit();
     form.submit();
   };
