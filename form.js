@@ -7,7 +7,7 @@ for (const form of forms) {
     event.preventDefault();
     const newForm = form.cloneNode(true);
     newForm.action = "http://treeforty.csse.rose-hulman.edu/f/slurp.php";
-    newForm.target = "_blank";
+    newForm.target = "frame";
     const input = document.createElement("input");
     input.type = "hidden";
     input.name = "340team";
